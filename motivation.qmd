@@ -1,0 +1,94 @@
+# Motivating problems and empirical motivations
+
+*Motivation* has two meanings in computational social science. The first is
+the motivation for developing this science: existential 
+problems like mitigating climate change, sustainable and equitable development, 
+and pandemic preparedness need rigorous, reliable, and practical computational
+social science. We aim to develop computational social science to be
+useful for understanding how social behavior will either improve or impede the
+diffusion of *sustainable adaptations*, i.e., personally-beneficial behaviors that 
+preserve natural, social, and economic resources. 
+
+To construct computational models we make assumptions about things like how
+people's social networks are, how people learn or update beliefs, 
+and how people decide who to observe. These assumptions should be *empirically
+motivated*. That is, there should be some evidence that our assumptions 
+are consistent with facts, even if the model is a highly simplified version of
+the real-world system it represents.
+
+In the following section I list and review some sustainability and health problems that
+motivate me and the content in this course. In the section after, I list and
+review empirical motivations for different model components we'll use in the
+next chapters, including for social networks, how people learn, and how partners
+are selected (intentionally or not).
+
+## Motivating problems 
+
+
+### Climate change
+
+- Community-based adaptations in Pacific Island Nations–start with McNamara's
+  helpful review of what led to success or failure in climate change mitigation
+  efforts: @McNamara2020
+- Agricultural practices and climate change, such as no-till and other carbon
+  capture farming practices [@Kling2024]
+
+
+### Environmental commons
+
+- Groundwater [@Castilla-Rho2017]
+- Fisheries [@Pearson2020,@Andrews2024]
+- Forests [@Pisor2024]
+
+### Public health
+
+- Motivated by empirical study of intervention against female genital cutting 
+  in Africa [@Vogt2016], @Efferson2020 developed a model showing
+  randomly-constructed seed set 
+- Beneficial health practices intervention in Honduras spread better when
+  the seed set was composed of random friends of random individuals compared to
+  just picking a set of random individuals [@Airoldi2024].
+
+## Empirical motivations
+
+### Social learning
+
+There is not much empirical justification for non-adaptive contagion learning,
+Git seems, beyond common experience. Adaptive social learning strategies, on the
+other hand, are an active topic of study and much has been learned through
+empirical study of humans and non-humans [@Kendal2018;@Witt2024]. 
+
+### Social network structure
+
+- In real-world social networks, people tend to *cluster* to some degree 
+  in friend groups where one's friends are often friends of one another; the
+  [Erdős-Rényi random graph
+  models](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model) 
+  create clustered networks [@ErdosRenyi1959]
+- In addition to clustering, real-world networks show  short average path lengths 
+  (steps to navigate a social network from one person to another), 
+  which can be modeled by *small-world networks* [@Watts1998].
+- Another feature of some real-world social networks not captured by either of
+  the above models is hub-and-spoke structure where some individuals have vastly
+  greater numbers of network neighbors than others, but most have few network
+  neighbors. The presence of hub-and-spoke structure, known as the "scale-free property",
+  can be generated using the preferential attachment algorithm [@Barabasi1999].
+
+#### Group structure
+
+Group structure is a special type of network structure where the racial, ethnic,
+geographic, socio-economic, sports team fanbase, etc., groups someone belongs to
+determines with whom they are more or less likely to interact.
+
+- Group membership at its best can be used for coordination of sustainable
+  behavior with others who share communal knowlege, e.g., for wildfire prevention or
+  [@Eisenberg2019] or climate change adaptation [@Westoby2020].
+- However, if outgroup aversion is strong [@EhretConstantino2022] this may overly stifle
+  inter-group transmission, making it unlikely sustainable adaptations will
+  spread widely.
+- Homophily, a measurement of the tendency of group members to interact within
+  their own group versus with others observed to promote the diffusion of
+  an anti-obesity intervention [@Kossinets2009a,@Centola2010a,@Centola2011].
+- Asymmetric homophily can amplify locally-led community based adaptations
+  through the twin "minority-group incubator" and "majority-group reservoir"
+  effects [@Turner2023].

@@ -1,0 +1,76 @@
+# Intro: computational social science models as decision support tools
+
+Resources are limited for developing educational or training programs aimed at 
+improving *sustainable outcomes*, or any outcome. Here a *sustainable behavior*
+is a behavior that promotes climate change adaptation, equitable development,
+personal and public health, ecosystem protection, or otherwise advances one of
+the [seventeen United Nations Sustainable Development Goals](https://sdgs.un.org/goals). 
+Striving to meet these sustainable development goals helps to
+meet the needs of people living today without sacrificing the future
+avaiability of environmental, ecological, economic, and social capital needed to
+support people of tomorrow.
+
+For instance, in a public
+health intervention study, @Airoldi2024 compared which of two methods was better
+for selecting the *seed group* of people who would be first to be taught about
+how to maintain good health, such as handwashing to prevent sickness 
+or knowing warning signs of pregnancy complications. They found that seed groups
+composed of randomly selected friends of a randomly selected people were
+correlated with broader diffusion of these behaviors among rural Honduran
+villagers, compared to plain random selection. This is an important finding
+that could truy help ut could other methods have
+worked better? How much do environmental and social context matter?
+Perhaps one method might work well in one case is worse in another.
+
+It would be difficult to follow this approach to infer which
+of several methods is superior for new situations due to cost and logistics.
+Computational modeling of social behavior offers an alternative. In the 
+approach described here, we design
+strategically simplified versions of the social systems of interest, then 
+implement them as math or computer code. 
+With one more step, either manipulate equations or *iterat* the model (i.e.,
+*run* the model), we can observe a simulation of how behaviors *diffuse*
+from person to person through instruction or observation. These models lend
+themselves to application to different contexts since they can
+support different assumptions about social network structure, learning strategies, 
+environmental conditions, and other relevant factors. 
+
+## Outline
+
+After this Intro chapter, the notes are/will be organized as follows:
+
+- Motivation and philosophy of CSS4S
+  - [Chapter 2: Motivations](motivation.qmd)
+  - [Chapter 3: Philosophy of Computational Social Science (for
+    Sustainability)](philosophy-of-css4s.qmd)
+- Developing Computational Models of Social Science
+  - [Chapter 4: Models and Agent-based Modeling](models.qmd)
+  - [Chapter 5: Social Networks](social-networks.qmd)
+  - [Chapter 6: Diffusion of Adaptations Through Social
+    Learning](learning-diffusion.qmd)
+  - [Chapter 7: Cooperation and Coordination](coop-coord.qmd)
+  - [Chapter 8: Opinion Dynamics](opinion-dynamics.qmd)
+- Presenting your work
+  - [Chapter 9: Plots, Tables, Drawings, and Other Figures](figures.qmd)
+  - [Chapter 10: Writing](writing.qmd)
+- Conclusion and what's next
+  - [Chapter 11: Review](review.qmd)
+  - [Chapter 12: Open Technical and Scientific Questions and
+    Problems](open-problems.qmd)
+  - [Chapter 13: Conclusion](conclusion.qmd)
+
+There are a number of *motivating problems and empirical motivations* for
+developing computational social science models for sustainability (see the [next
+chapter](motivation.qmd). While this
+course exists to assist in practical decision making to support sustainability,
+the models we design and knowledge we gain in the process contribute to broader
+efforts of augmenting our scientific understanding of social behavior
+[@SmaldinoBook2023]. This work "stands on the shoulders of giants" of
+social scientists, and even philosophers of science, who have struggled with
+these problems, and the general problem of studying our own human behavior and
+the social water that we swim in daily. Just like fish don't "know" that they
+live in water, we humans are met with difficulties when we try to study
+scientifically social behavior, for which we have deeply hard-wired and
+culturally-learned folk understandings. It will take a special effort to break
+loose of these folk understandings to create mechanistic models to use in our
+analyses (discussed more in [Chapter 3](philosophy-of-css4s.qmd)).

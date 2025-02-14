@@ -1,0 +1,44 @@
+project:
+  type: book
+
+book:
+  title: "Computational Social Science for Sustainability: Course Notes"
+  author: "Matt Turner"
+  date: "2/11/2025"
+  chapters:
+  - index.qmd
+  - intro.qmd
+  - part: Motivation and Philosophy of CSS4S
+    chapters:
+    - motivation.qmd
+    - philosophy-of-css4s.qmd
+  - part: Computational and Mathematical Models of Social Behavior
+    chapters:
+    - models.qmd
+    - social-networks.qmd
+    - learning-diffusion.qmd
+    - coop-coord.qmd
+    - opinion-dynamics.qmd
+  - part: Presenting Your Work
+    chapters:
+        - figures.qmd
+        - writing.qmd
+  - part: Conclusion and What's Next
+    chapters:
+    - review.qmd
+    - open-problems.qmd
+    - conclusion.qmd
+
+  - references.qmd
+
+bibliography: ../library.bib
+
+format:
+  html:
+    theme: materia
+
+  pdf:
+    documentclass: scrreprt
+
+
+
