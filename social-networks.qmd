@@ -53,14 +53,14 @@ what being connected means. When it comes to the diffusion of adaptations, the
 
 ### Simple example
 
-(INSERT SIMPLE 4-PERSON NEIGHBORHOOD HERE)
+INSERT SIMPLE 4-PERSON NEIGHBORHOOD HERE
 
 ## The importance of social networks
 
-- 
 - Development and diffusion of innovations and adaptations, 
     - @Derex2016, @Moser2023
-    - core-periphery ideas 
+    - core-periphery ideas:
+        - @ 
     - Networks in epidemiology: 
         - sexual networks for STD prediction and prevention  
         - Employment and travel patterns for respiratory infections
@@ -156,11 +156,15 @@ Homophily is the name given to a network measure of how likely individuals
 are to have a social connection
 
 - Humans form groups and [@Cikara2014;@Cikara2017]
-- @Centola2010, @Centola2011 to introduce the concept and power of homophily
+- @Centola2010, @Centola2011 to introduce the concept and importance of homophily in a series of interventions against obesity
 - 
 - In Centola's theory, homophily is a global attribute assumed equal for all individuals. In fact, it's specified by the experimental design.
-- The more general case is asymmetric homophily, where.
+- The more general case is asymmetric homophily, where homophily is set based
+on group membership [@Morris1991;@Lee2019;@Turner2023]
+- The most general case, rarely modeled, is 
 
-### Measuring asymmetric homophily in real-world networks
+### Construction of homophilic networks
 
+```{r}
 
+```
