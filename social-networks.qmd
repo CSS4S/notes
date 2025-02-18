@@ -15,9 +15,9 @@ have many forms: friendship, economic exchange, or instruction/learning
 are all forms of relationships that could be represented as a social
 network. The word *network* is just the long form of the word *net*, as
 in a fishing, mosquito, or storage net [@Smaldino2023, Ch. 9]. In
-Portuguese and Spanish, for example, the phrase *social network* is
-translated *rede social*, where *rede* translates to *net* when not used
-to describe social net(works).
+Portuguese, for example, the phrase *social network* is
+translated *rede social* (*red social* in Spanish), where *rede* (*red*) 
+translates to *net* when not used to describe social net(works).
 
 ## Basic network model concepts
 
@@ -32,17 +32,23 @@ are drawn as circles, or another shape, whose size or color could be
 related to one of the attributes, e.g., circle size could represent
 income and circle color could represent political party.
 
-![Asymmetric social relationships,
-like teacher-learner relationships, are represented with an arrow for the flow of
-information, money, advice, or other social or economic capital (A). 
-Symmetric relationships, like friendship or
-geographical proximity, are drawn as a line with no arrows
-or as two arrows, one in each direction
-(B). Edges can represent different relationships, where (C) could be, e.g., that $i$ teaches karate to $j$ (top pink arrow) and $j$ sells hand-made furniture to $i$ (bottom orange arrow). Companies or institutions can be included as alternative vertex types, along with people, where (D) could show, e.g., that $i$ and $j$ work for the company $k$.](images/clipboard-3994932320.png){style="float: left; margin: 5px;" width="300" #fig-vertex-edge-example}
+![Arrows represent the flow of information, money, influence, etc., in asymmetric social relationships (A). 
+Lines with no arrows, or two arrows between agents pointing one in each
+direction, represent symmetric relationships
+(B). Edges can represent different relationships; e.g., 
+$i$ teaches karate to $j$ (pink arrow), and in return $j$ gives $i$ hand-made furniture 
+(orange arrow) (C). 
+Nodes can represent different entity types, e.g.,
+$i$ and $j$ work for and are paid by company $k$
+(D).](images/clipboard-3994932320.png){style="float: left; margin: 5px;"
+width="250" #fig-vertex-edge-example}
 
 Relationships in social networks between individuals are represented by
 *edges*, drawn as lines between vertices [@fig-vertex-edge-example]. *Asymmetric relationships*, such as teacher-learner, seller-buyer, etc., involve the flow of something, like information or products/services in these examples. In this case the lines between vertices have arrows. Symmetric relationships, such as healthy friendships and geographic proximity, are drawn as a single line without arrows.
-
+We can say there exists a *social connection* if $i$ and $j$ have some sort of
+social, economic, or other relationship with one another, or we can say they
+are *connected*. When we create social network models we will always specify 
+what being connected means. When it comes to the diffusion of adaptations, the
 
 
 ### Simple example
@@ -51,6 +57,7 @@ Relationships in social networks between individuals are represented by
 
 ## The importance of social networks
 
+- 
 - Development and diffusion of innovations and adaptations, 
     - @Derex2016, @Moser2023
     - core-periphery ideas 
@@ -62,11 +69,11 @@ Relationships in social networks between individuals are represented by
     - @Jackson2008, Ch. 8, starting on p. 223
 
 
-### Working with network models
+## Working with network models
 
 
 
-#### Create a network from scratch
+### Create a network from scratch
 
 
 ```{r}
@@ -86,7 +93,7 @@ You could specify that there exist some number of "leader" nodes who have more o
 
 
 
-#### Load network data from a library
+### Load network data from a library
 
 This example shows how to load network data from an R library. Specifically,
 we will load the Florentine intermarriage network data used as a motivating
@@ -103,6 +110,11 @@ library(dplyr)     # To easily rename tibble columns.
 
 
 ```{r}
+#| label: fig-florentine-families
+#| caption: 
+#| fig-cap-location: margin
+#| fig-height: 3
+
 # The Florentine network data contains one disconnected family; remove it here.
 florentine_m <- delete_vertices(florentine_m, which(degree(florentine_m) == 0))
 
@@ -112,8 +124,8 @@ flornet <-
 
 # The x, y, xend, and yend variables are assigned in ggnetwork call.
 ggplot(flornet, aes(x = x, y = y, xend = xend, yend = yend)) +
-  geom_edges(color = "black") +
-  geom_nodes(aes(size = Wealth), color = "darkgrey") + 
+  geom_edges(color = "grey", ) +
+  geom_nodes(aes(size = Wealth), color = "#8AB8A7") + 
   geom_nodelabel_repel(aes(label = Name), color = "#0099b7", 
                        box.padding = unit(0.5, "lines")) +
   theme_blank()
@@ -136,20 +148,19 @@ ggplot(flornet, aes(x = x, y = y, xend = xend, yend = yend)) +
 ## Random networks 
 
 
-## Groups and homophily
+## Homophily
 
+The final type of network construction process is somewhat more
+empirically-motivated than others: this is the *homophily*-structured network.
+Homophily is the name given to a network measure of how likely individuals
+are to have a social connection
 
-### Neuroscience of groups
-
-- @Cikara2014, @Cikara2017
-
-### Homophily 
-
+- Humans form groups and [@Cikara2014;@Cikara2017]
 - @Centola2010, @Centola2011 to introduce the concept and power of homophily
 - 
 - In Centola's theory, homophily is a global attribute assumed equal for all individuals. In fact, it's specified by the experimental design.
 - The more general case is asymmetric homophily, where.
 
-#### Measuring asymmetric homophily in real-world networks
+### Measuring asymmetric homophily in real-world networks
 
 

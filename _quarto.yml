@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "Computational Social Science for Sustainability: Course Notes"
+  title: "Computational Social Science for Sustainability (CSS4S)"
   author: "Matt Turner"
   date: "2/11/2025"
   chapters:
@@ -36,6 +36,7 @@ bibliography: ../library.bib
 format:
   html:
     theme: materia
+    fontsize: smaller
 
   pdf:
     documentclass: scrreprt
