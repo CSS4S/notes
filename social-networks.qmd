@@ -155,9 +155,12 @@ empirically-motivated than others: this is the *homophily*-structured network.
 Homophily is the name given to a network measure of how likely individuals
 are to have a social connection
 
-- Humans form groups and [@Cikara2014;@Cikara2017]
-- @Centola2010, @Centola2011 to introduce the concept and importance of homophily in a series of interventions against obesity
-- 
+- Humans evolved to form groups [@Cikara2014;@Cikara2017]
+  - @EhretConstantino2022
+- @Centola2010, @Centola2011 to introduce the concept and importance of homophily in a series of interventions against obesity. Obese individuals were more successful adopting practices that limited obesity when homophily was greater and they interacted more frequently with other obese people 
+- Two types of homophily:
+  - *Choice homophily*: Personal preferences for interacting with similar others, not necessarily conscious (see implicit bias stuff)
+  - *Structural* or *induced* homophily: A history of racial segregation, one's career, and similar factors affect how frequently one interacts with in-group members versus out-group members
 - In Centola's theory, homophily is a global attribute assumed equal for all individuals. In fact, it's specified by the experimental design.
 - The more general case is asymmetric homophily, where homophily is set based
 on group membership [@Morris1991;@Lee2019;@Turner2023]
