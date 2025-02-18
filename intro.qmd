@@ -74,3 +74,12 @@ scientifically social behavior, for which we have deeply hard-wired and
 culturally-learned folk understandings. It will take a special effort to break
 loose of these folk understandings to create mechanistic models to use in our
 analyses (discussed more in [Chapter 3](philosophy-of-css4s.qmd)).
+
+## Cognitive and social foundations of computational social science
+
+The following chapters stand on a foundation of cognitive, social, and behavioral
+sciences. Models of social behavior simplify the real-world to understand the
+consequences of complex social dynamics. Social interaction is charactarized by complexity, 
+
+
+
