@@ -14,3 +14,12 @@ plot_florentine_default <- function() {
                            box.padding = unit(0.5, "lines")) +
       theme_blank()
 }
+
+make_centola_network <- function(N, homophily = 0.0) {
+  # 
+}
+
+
+make_minmaj_network <- function(N, frac_minority, hmin = 0.0, hmaj = 0.0) {
+  
+}
