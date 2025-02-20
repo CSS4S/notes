@@ -1,0 +1,11 @@
+Metropolitan area,Unweighted,Weighted by wage,BA share,Median income,White share,Owner share
+"San Jose-Sunnyvale-Santa Clara, CA",0.51,0.66,0.5,115,0.46,0.57
+"Washington-Arlington-Alexandria, DC-VA-MD-WV",0.5,0.64,0.51,101,0.54,0.63
+"Durham-Chapel Hill, NC",0.5,0.67,0.51,101,0.54,0.63
+"Austin-Round Rock, TX",0.46,0.58,0.6,60,0.62,0.6
+"San Francisco-Oakland-Hayward, CA",0.46,0.58,0.44,73,0.77,0.58
+"Boston-Cambridge-Nashua, MA-NH",0.44,0.64,0.49,100,0.73,0.62
+"Bridgeport-Stamford-Norwalk, CT",0.43,0.66,0.47,86,0.76,0.62
+"Hartford-West Hartford-East Hartford, CT",0.43,0.53,0.39,76,0.73,0.67
+"Salt Lake City, UT",0.43,0.53,0.39,76,0.76,0.67
+"Des Moines-West Des Moines, IA",0.43,0.53,0.37,69,0.87,0.69

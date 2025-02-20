@@ -60,12 +60,15 @@ INSERT SIMPLE 4-PERSON NEIGHBORHOOD HERE
 - Development and diffusion of innovations and adaptations, 
     - @Derex2016, @Moser2023
     - core-periphery ideas:
-        - @ 
-    - Networks in epidemiology: 
-        - sexual networks for STD prediction and prevention  
-        - Employment and travel patterns for respiratory infections
+        - @Jones2021
+        - @Pisor2021
+        - @Pisor2024 
+- Networks in epidemiology: 
+    - sexual networks for STD prediction and prevention [@Morris1991]
+    - Employment and travel patterns during COVID-19 since not all jobs can be done at home [@Dingle2020]; "front-line" and "essential" workers are obligated to interact with people across socio-economic and ethnic or racial groups, which is
+      essential to understand to predict the spread of future pandemics
 - Political polarization and social influence
-    - @Turner2018
+    - @Flache2011 showed small-world networks can increase polarization (I followed up to show that initial opinion distribution and communication noise can override network effects [@Turner2018])
     - @Jackson2008, Ch. 8, starting on p. 223
 
 
@@ -73,14 +76,16 @@ INSERT SIMPLE 4-PERSON NEIGHBORHOOD HERE
 
 
 
-### Create a network from scratch
+### Create networks from scratch
 
 
 ```{r}
 #| output: false
 library(igraph)
 library(ggnetwork) 
+library(socmod)
 ```
+
 1. Create an empty graph
 1. Add nodes with attributes 
 1. Add edges
@@ -89,8 +94,6 @@ library(ggnetwork)
 This approach may be useful if you want to create a stylized network but aren't
 aware of any existing data.
 You could specify that there exist some number of "leader" nodes who have more out-edges than in-edges, for example, representing advice, instructions, or other information that more frequently flows from leaders to others. 
-
-
 
 
 ### Load network data from a library
@@ -133,29 +136,110 @@ ggplot(flornet, aes(x = x, y = y, xend = xend, yend = yend)) +
 
 ### Network measures
 
+```{r}
+
+```
+
+
 #### Distance
+
+```{r}
+
+```
+
 
 #### Transitivity
 
+
 #### Betweenness 
+
 
 #### Exposure probability
 
 
+
 ## Regular networks
 
+`igraph` provides `make_complete` and `make_ring`,
+
+```{r}
+#| fig-width: 1.65
+#| fig-asp: 1
+#| column: margin
+#| fig-cap: Full or complete graph where all individuals have $N-1$ neighbors.
+#| label: fig-full-graph
+#| 
+plot_circular <- function(g, node_size = 4) { 
+  
+  net <- ggnetwork(g, layout = layout_in_circle(g))
+  
+  ggplot(net, aes(x=x, y=y, xend=xend, yend=yend)) +
+    geom_edges(color = "grey") +
+    geom_nodes(color = "#8AB8A7", size=node_size) +
+    theme_blank()
+}
+N <- 10
+gc <- make_full_graph(N)
+plot_circular(gc, 4)
+```
+
+```{r}
+#| fig-width: 1.65
+#| fig-asp: 1
+#| column: margin
+#| fig-cap: Ring network of $N$ agents, each with degree $k=2$.
+#| label: fig-ring-graph
+#| 
+r <- make_ring(N)
+plot_circular(r, node_size = 3)
+```
+```{r}
+#| fig-width: 1.65
+#| fig-asp: 1
+#| column: margin
+#| fig-cap: Lattice with $N = 10$, $k=4$.
+#| label: fig-lattice
+latnet <- regular_lattice(10, 4)
+plot_circular(latnet, 3)
+```
 
 ## Random networks 
 
+
+```{r}
+#| fig-width: 1.65
+#| fig-asp: 1
+#| column: margin
+#| fig-cap: Erdős-Réyni with $N = 10$ nodes and $M=20$ edges.
+#| label: fig-gnm
+
+g <- G_NM(10, 20)
+plot_circular(g, 3)
+```
+
+
+```{r}
+#| fig-width: 1.65
+#| fig-asp: 1
+#| column: margin
+#| fig-cap: Rewired lattice starting with $N = 10$, $k=4$, where each edge gets rewired with probability $p$.
+#| label: fig-rewired-swnet
+  
+rewired_latnet <- rewire(latnet, each_edge(p=0.2, loops = FALSE))
+plot_circular(rewired_latnet, 3)
+```
 
 ## Homophily
 
 The final type of network construction process is somewhat more
 empirically-motivated than others: this is the *homophily*-structured network.
-Homophily is the name given to a network measure of how likely individuals
-are to have a social connection
+Homophily is the name given to a network measure of how relatively likely
+individuals are to have relationships with members of their
+own group versus other groups. 
 
-- Humans evolved to form groups [@Cikara2014;@Cikara2017]
+### Groups
+
+- Humans evolved to form groups, as  [@Cikara2014;@Cikara2017]
   - @EhretConstantino2022
 - @Centola2010, @Centola2011 to introduce the concept and importance of homophily in a series of interventions against obesity. Obese individuals were more successful adopting practices that limited obesity when homophily was greater and they interacted more frequently with other obese people 
 - Two types of homophily:
@@ -164,9 +248,12 @@ are to have a social connection
 - In Centola's theory, homophily is a global attribute assumed equal for all individuals. In fact, it's specified by the experimental design.
 - The more general case is asymmetric homophily, where homophily is set based
 on group membership [@Morris1991;@Lee2019;@Turner2023]
-- The most general case, rarely modeled, is 
 
 ### Construction of homophilic networks
+
+We can construct a model of homophilic networks as follows:
+
+1. Specify size of each group, homophily, 
 
 ```{r}
 
