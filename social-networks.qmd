@@ -34,10 +34,10 @@ income and circle color could represent political party.
 
 ![Arrows represent the flow of information, money, influence, etc., in asymmetric social relationships (A). 
 Lines with no arrows, or two arrows between agents pointing one in each
-direction, represent symmetric relationships
-(B). Edges can represent different relationships; e.g., 
-$i$ teaches karate to $j$ (pink arrow), and in return $j$ gives $i$ hand-made furniture 
-(orange arrow) (C). 
+direction, represent symmetric relationships (B). 
+Edges can represent different relationships; e.g., 
+$i$ teaches karate to $j$ (pink arrow), and in return $j$ 
+gives $i$ hand-made furniture (orange arrow) (C). 
 Nodes can represent different entity types, e.g.,
 $i$ and $j$ work for and are paid by company $k$
 (D).](images/clipboard-3994932320.png){style="float: left; margin: 5px;"
@@ -141,6 +141,13 @@ ggplot(flornet, aes(x = x, y = y, xend = xend, yend = yend)) +
 ```
 
 
+#### Degree distribution
+
+```{r}
+
+```
+
+
 #### Distance
 
 ```{r}
@@ -150,12 +157,23 @@ ggplot(flornet, aes(x = x, y = y, xend = xend, yend = yend)) +
 
 #### Transitivity
 
+```{r}
+
+```
+
 
 #### Betweenness 
+
+```{r}
+
+```
 
 
 #### Exposure probability
 
+```{r}
+
+```
 
 
 ## Regular networks
@@ -183,6 +201,7 @@ gc <- make_full_graph(N)
 plot_circular(gc, 4)
 ```
 
+
 ```{r}
 #| fig-width: 1.65
 #| fig-asp: 1
@@ -193,6 +212,10 @@ plot_circular(gc, 4)
 r <- make_ring(N)
 plot_circular(r, node_size = 3)
 ```
+
+
+
+
 ```{r}
 #| fig-width: 1.65
 #| fig-asp: 1
@@ -202,6 +225,8 @@ plot_circular(r, node_size = 3)
 latnet <- regular_lattice(10, 4)
 plot_circular(latnet, 3)
 ```
+
+
 
 ## Random networks 
 
@@ -229,6 +254,8 @@ rewired_latnet <- rewire(latnet, each_edge(p=0.2, loops = FALSE))
 plot_circular(rewired_latnet, 3)
 ```
 
+
+
 ## Homophily
 
 The final type of network construction process is somewhat more
@@ -236,6 +263,7 @@ empirically-motivated than others: this is the *homophily*-structured network.
 Homophily is the name given to a network measure of how relatively likely
 individuals are to have relationships with members of their
 own group versus other groups. 
+
 
 ### Groups
 
@@ -248,6 +276,7 @@ own group versus other groups.
 - In Centola's theory, homophily is a global attribute assumed equal for all individuals. In fact, it's specified by the experimental design.
 - The more general case is asymmetric homophily, where homophily is set based
 on group membership [@Morris1991;@Lee2019;@Turner2023]
+
 
 ### Construction of homophilic networks
 
