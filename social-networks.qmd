@@ -15,9 +15,9 @@ have many forms: friendship, economic exchange, or instruction/learning
 are all forms of relationships that could be represented as a social
 network. The word *network* is just the long form of the word *net*, as
 in a fishing, mosquito, or storage net [@Smaldino2023, Ch. 9]. In
-Portuguese, for example, the phrase *social network* is
-translated *rede social* (*red social* in Spanish), where *rede* (*red*) 
-translates to *net* when not used to describe social net(works).
+Portuguese, for example, the phrase *social network* is translated *rede
+social* (*red social* in Spanish), where *rede* (*red*) translates to
+*net* when not used to describe social net(works).
 
 ## Basic network model concepts
 
@@ -32,24 +32,28 @@ are drawn as circles, or another shape, whose size or color could be
 related to one of the attributes, e.g., circle size could represent
 income and circle color could represent political party.
 
-![Arrows represent the flow of information, money, influence, etc., in asymmetric social relationships (A). 
-Lines with no arrows, or two arrows between agents pointing one in each
-direction, represent symmetric relationships
-(B). Edges can represent different relationships; e.g., 
-$i$ teaches karate to $j$ (pink arrow), and in return $j$ gives $i$ hand-made furniture 
-(orange arrow) (C). 
-Nodes can represent different entity types, e.g.,
-$i$ and $j$ work for and are paid by company $k$
-(D).](images/clipboard-3994932320.png){style="float: left; margin: 5px;"
-width="250" #fig-vertex-edge-example}
+![Arrows represent the flow of information, money, influence, etc., in
+asymmetric social relationships (A). Lines with no arrows, or two arrows
+between agents pointing one in each direction, represent symmetric
+relationships (B). Edges can represent different relationships; e.g.,
+$i$ teaches karate to $j$ (pink arrow), and in return $j$ gives $i$
+hand-made furniture (orange arrow) (C). Nodes can represent different
+entity types, e.g., $i$ and $j$ work for and are paid by company $k$
+(D).](images/clipboard-3994932320.png){#fig-vertex-edge-example
+style="float: left; margin: 5px;" width="250"}
 
 Relationships in social networks between individuals are represented by
-*edges*, drawn as lines between vertices [@fig-vertex-edge-example]. *Asymmetric relationships*, such as teacher-learner, seller-buyer, etc., involve the flow of something, like information or products/services in these examples. In this case the lines between vertices have arrows. Symmetric relationships, such as healthy friendships and geographic proximity, are drawn as a single line without arrows.
-We can say there exists a *social connection* if $i$ and $j$ have some sort of
-social, economic, or other relationship with one another, or we can say they
-are *connected*. When we create social network models we will always specify 
-what being connected means. When it comes to the diffusion of adaptations, the
-
+*edges*, drawn as lines between vertices [@fig-vertex-edge-example].
+*Asymmetric relationships*, such as teacher-learner, seller-buyer, etc.,
+involve the flow of something, like information or products/services in
+these examples. In this case the lines between vertices have arrows.
+Symmetric relationships, such as healthy friendships and geographic
+proximity, are drawn as a single line without arrows. We can say there
+exists a *social connection* if $i$ and $j$ have some sort of social,
+economic, or other relationship with one another, or we can say they are
+*connected*. When we create social network models we will always specify
+what being connected means. When it comes to the diffusion of
+adaptations, the
 
 ### Simple example
 
@@ -57,27 +61,29 @@ INSERT SIMPLE 4-PERSON NEIGHBORHOOD HERE
 
 ## The importance of social networks
 
-- Development and diffusion of innovations and adaptations, 
-    - @Derex2016, @Moser2023
-    - core-periphery ideas:
-        - @Jones2021
-        - @Pisor2021
-        - @Pisor2024 
-- Networks in epidemiology: 
-    - sexual networks for STD prediction and prevention [@Morris1991]
-    - Employment and travel patterns during COVID-19 since not all jobs can be done at home [@Dingle2020]; "front-line" and "essential" workers are obligated to interact with people across socio-economic and ethnic or racial groups, which is
-      essential to understand to predict the spread of future pandemics
-- Political polarization and social influence
-    - @Flache2011 showed small-world networks can increase polarization (I followed up to show that initial opinion distribution and communication noise can override network effects [@Turner2018])
-    - @Jackson2008, Ch. 8, starting on p. 223
-
+-   Development and diffusion of innovations and adaptations,
+    -   @Derex2016, @Moser2023
+    -   core-periphery ideas:
+        -   @Jones2021
+        -   @Pisor2021
+        -   @Pisor2024
+-   Networks in epidemiology:
+    -   sexual networks for STD prediction and prevention [@Morris1991]
+    -   Employment and travel patterns during COVID-19 since not all
+        jobs can be done at home [@Dingle2020]; "front-line" and
+        "essential" workers are obligated to interact with people across
+        socio-economic and ethnic or racial groups, which is essential
+        to understand to predict the spread of future pandemics
+-   Political polarization and social influence
+    -   @Flache2011 showed small-world networks can increase
+        polarization (I followed up to show that initial opinion
+        distribution and communication noise can override network
+        effects [@Turner2018])
+    -   @Jackson2008, Ch. 8, starting on p. 223
 
 ## Working with network models
 
-
-
 ### Create networks from scratch
-
 
 ```{r}
 #| output: false
@@ -86,23 +92,25 @@ library(ggnetwork)
 library(socmod)
 ```
 
-1. Create an empty graph
-1. Add nodes with attributes 
-1. Add edges
-1. Visualize the network using [`ggnetwork`](https://briatte.github.io/ggnetwork/index.html) for a ggplot interface for graph viz
+1.  Create an empty graph
+2.  Add nodes with attributes
+3.  Add edges
+4.  Visualize the network using
+    [`ggnetwork`](https://briatte.github.io/ggnetwork/index.html) for a
+    ggplot interface for graph viz
 
-This approach may be useful if you want to create a stylized network but aren't
-aware of any existing data.
-You could specify that there exist some number of "leader" nodes who have more out-edges than in-edges, for example, representing advice, instructions, or other information that more frequently flows from leaders to others. 
-
+This approach may be useful if you want to create a stylized network but
+aren't aware of any existing data. You could specify that there exist
+some number of "leader" nodes who have more out-edges than in-edges, for
+example, representing advice, instructions, or other information that
+more frequently flows from leaders to others.
 
 ### Load network data from a library
 
-This example shows how to load network data from an R library. Specifically,
-we will load the Florentine intermarriage network data used as a motivating
-example for the introductory chapter to @Jackson2008. First, we load a
-few more R packages we'll need for this.
-
+This example shows how to load network data from an R library.
+Specifically, we will load the Florentine intermarriage network data
+used as a motivating example for the introductory chapter to
+@Jackson2008. First, we load a few more R packages we'll need for this.
 
 ```{r}
 #| output: false
@@ -110,7 +118,6 @@ library(netrankr)  # To load Florentine marriage network.
 library(tibble)    # To make ggnetwork-gen'd list into a tibble.
 library(dplyr)     # To easily rename tibble columns.
 ```
-
 
 ```{r}
 #| label: fig-florentine-families
@@ -140,23 +147,17 @@ ggplot(flornet, aes(x = x, y = y, xend = xend, yend = yend)) +
 
 ```
 
-
 #### Distance
 
 ```{r}
 
 ```
 
-
 #### Transitivity
 
-
-#### Betweenness 
-
+#### Betweenness
 
 #### Exposure probability
-
-
 
 ## Regular networks
 
@@ -173,10 +174,12 @@ plot_circular <- function(g, node_size = 4) {
   
   net <- ggnetwork(g, layout = layout_in_circle(g))
   
-  ggplot(net, aes(x=x, y=y, xend=xend, yend=yend)) +
+  p <- ggplot(net, aes(x=x, y=y, xend=xend, yend=yend)) +
     geom_edges(color = "grey") +
     geom_nodes(color = "#8AB8A7", size=node_size) +
     theme_blank()
+  
+  return (p)
 }
 N <- 10
 gc <- make_full_graph(N)
@@ -193,6 +196,7 @@ plot_circular(gc, 4)
 r <- make_ring(N)
 plot_circular(r, node_size = 3)
 ```
+
 ```{r}
 #| fig-width: 1.65
 #| fig-asp: 1
@@ -203,8 +207,7 @@ latnet <- regular_lattice(10, 4)
 plot_circular(latnet, 3)
 ```
 
-## Random networks 
-
+## Random networks
 
 ```{r}
 #| fig-width: 1.65
@@ -216,7 +219,6 @@ plot_circular(latnet, 3)
 g <- G_NM(10, 20)
 plot_circular(g, 3)
 ```
-
 
 ```{r}
 #| fig-width: 1.65
@@ -232,28 +234,59 @@ plot_circular(rewired_latnet, 3)
 ## Homophily
 
 The final type of network construction process is somewhat more
-empirically-motivated than others: this is the *homophily*-structured network.
-Homophily is the name given to a network measure of how relatively likely
-individuals are to have relationships with members of their
-own group versus other groups. 
+empirically-motivated than others: this is the *homophily*-structured
+network. Homophily is the name given to a network measure of how
+relatively likely individuals are to have relationships with members of
+their own group versus other groups.
 
 ### Groups
 
-- Humans evolved to form groups, as  [@Cikara2014;@Cikara2017]
-  - @EhretConstantino2022
-- @Centola2010, @Centola2011 to introduce the concept and importance of homophily in a series of interventions against obesity. Obese individuals were more successful adopting practices that limited obesity when homophily was greater and they interacted more frequently with other obese people 
-- Two types of homophily:
-  - *Choice homophily*: Personal preferences for interacting with similar others, not necessarily conscious (see implicit bias stuff)
-  - *Structural* or *induced* homophily: A history of racial segregation, one's career, and similar factors affect how frequently one interacts with in-group members versus out-group members
-- In Centola's theory, homophily is a global attribute assumed equal for all individuals. In fact, it's specified by the experimental design.
-- The more general case is asymmetric homophily, where homophily is set based
-on group membership [@Morris1991;@Lee2019;@Turner2023]
+-   Humans evolved to form groups, as [@Cikara2014; @Cikara2017]
+    -   @EhretConstantino2022
+-   @Centola2010, @Centola2011 to introduce the concept and importance
+    of homophily in a series of interventions against obesity. Obese
+    individuals were more successful adopting practices that limited
+    obesity when homophily was greater and they interacted more
+    frequently with other obese people
+-   Two types of homophily:
+    -   *Choice homophily*: Personal preferences for interacting with
+        similar others, not necessarily conscious (see implicit bias
+        stuff)
+    -   *Structural* or *induced* homophily: A history of racial
+        segregation, one's career, and similar factors affect how
+        frequently one interacts with in-group members versus out-group
+        members
+-   In Centola's theory, homophily is a global attribute assumed equal
+    for all individuals. In fact, it's specified by the experimental
+    design.
+-   The more general case is asymmetric homophily, where homophily is
+    set based on group membership [@Morris1991; @Lee2019; @Turner2023]
 
 ### Construction of homophilic networks
 
 We can construct a model of homophilic networks as follows:
 
-1. Specify size of each group, homophily, 
+1.  Specify size of each group, $N_g$, the global mean node degree, $k$,
+    and global or group-level homophily levels ($h$ or $h_g$)
+2.  Calculate the total number of edges for each group, $E_g = N_g k$.
+3.  Calculate the number of within- and between-group edges for each
+    group, $E_{g,\mathrm{in}}$ and $E_{g,\mathrm{out}}$, respectively
+    (i.e. for *in*-group and *out*-group edges-see below for equations).
+4.  Assign all *within* edges by random selection of nodes.
+5.  Randomly assign between-group edges by randomly selecting vertices,
+    weighted by how many between-edges remain to be assigned to the
+    group. Remove groups from selection of all between-edges have been
+    assigned.
+    1.  If this process ends with just one group needing more
+        between-edges added, break one existing between-group edge that
+        does not have a vertex from that group. This will be an even
+        number Add two new edges for each broken edge, wire one random
+        vertex from the lacking group to a random vertex to one of the
+        randomly chosen groups that had its between-edge broken. Then do
+        the same for another vertex from the original group to a random
+        vertex from the other group that lost a between-group edge.
+    2.  If this fails somehow, just add between-group edges at random
+        for groups lacking all between-group edges they should have.
 
 ```{r}
 

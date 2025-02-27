@@ -33,10 +33,6 @@ make_homophily_network <- function(group_sizes = c(3, 7), mean_degree = 6,
   
   g <- make_empty_graph(N, directed)
   
-  if (is.null(group_names)) {
-    group_names <- map_vec(1:length(group_sizes), \(ii) { as.factor(ii) })
-  }
-  
   a_idx = 1
   g_idx = 1
   for (group_size in group_sizes) {
@@ -117,6 +113,6 @@ plot_homopily_network <- function(hnet) {
 make_minmaj_network <- function(N, frac_minority, hmin = 0.0, hmaj = 0.0) {
   
 }
-
+ 
 
 

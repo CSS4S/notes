@@ -8,10 +8,10 @@ book:
   chapters:
   - index.qmd
   - intro.qmd
-  - part: Motivation and Philosophy of CSS4S
-    chapters:
-    - motivation.qmd
-    - philosophy-of-css4s.qmd
+  # - part: Motivation and Philosophy of CSS4S
+  #   chapters:
+  #   - motivation.qmd
+  #   - philosophy-of-css4s.qmd
   - part: Computational and Mathematical Models of Social Behavior
     chapters:
     - models.qmd
