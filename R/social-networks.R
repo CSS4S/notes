@@ -1,5 +1,7 @@
 library(assertthat)
 library(igraph)
+library(netrankr)
+library(ggnetwork)
 library(purrr)
 
 plot_florentine_default <- function() {
