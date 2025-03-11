@@ -1,11 +1,8 @@
 # Welcome! {.unnumbered}
 
-These are the course notes for . In many cases they are incomplete as this course
-and the [`socmod`](https://css4s.github.io/socmod) library are being actively developed. Still, this seems worthwhile
-even if it's an active work-in-progress.
+These are the course notes for the introduction to Computational Social Science for Sustainability (CSS4S), the first course in the CSS4S series at the [Stanford Doerr School of Sustainability](https://sustainability.stanford.edu/). The course and the [`socmod`](https://css4s.github.io/socmod) library are under active development.
 
-If you have suggestions, questions, want to report typos, etc., please help me out 
-and [open an issue](https://github.com/CSS4S/notes/issues) on the repo's github page. 
+If you have suggestions, questions, want to report typos, etc., please help me out and [open an issue](https://github.com/CSS4S/notes/issues) on the repo's github page.
 
 This website is and will always be free, licensed under the [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) License.
 

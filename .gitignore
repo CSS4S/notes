@@ -2,3 +2,4 @@
 _book/*
 .Rproj.user/
 *_files
+*.html

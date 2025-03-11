@@ -53,7 +53,7 @@ exists a *social connection* if $i$ and $j$ have some sort of social,
 economic, or other relationship with one another, or we can say they are
 *connected*. When we create social network models we will always specify
 what being connected means. When it comes to the diffusion of
-adaptations, the
+adaptations, the connections are teacher-learner relationships. 
 
 ### Simple example
 
@@ -234,7 +234,7 @@ plot_circular(r, node_size = 3)
 #| column: margin
 #| fig-cap: Lattice with $N = 10$, $k=4$.
 #| label: fig-lattice
-latnet <- regular_lattice(10, 4)
+latnet <- make_regular_lattice(10, 4)
 plot_circular(latnet, 3)
 ```
 

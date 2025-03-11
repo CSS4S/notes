@@ -1,0 +1,17 @@
+In this course, we framed social behavior and social change as an ongoing 
+process of matching with social partners, interaction with social partners,
+and individual-level behavioral change based on socially-learned information.
+
+Our work here is motivated by a desperate need in our rapidly changing world: to know how efforts to make the world more sustainable place. Sustainability is multidimensional, with the United Nations identifying seventeen *Sustainable Development Goals*.
+
+In our CSS4S framework, social learning involves two fundamental factors of social behavior change: (1) individuals partnering to form learner-teacher dyads and (2) social networks that structure who may partner with whom. We devoted a lot of time to understanding the role of social networks in sustainability and behavior change more generally. 
+
+For our purposes, we distilled social learning into three categories:
+
+1. Contagion learning
+2. Frequency-biased learning
+3. Success-biased learning
+
+Learning is a complex process. To fully describe it scientifically requires specialized practices and procedures with biology, neuroscience, and psychology/cognitive science, and more. Our simple representations of learning, however, suffice both for this tutorial introduction to computational social science, and in many research and real-world applications of computational social science. This is partly because human learning, though adaptive and complex, 
+
+As we have reviewed in the course, studying social networks cna 

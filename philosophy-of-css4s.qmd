@@ -1,6 +1,0 @@
-# Philosophy of CSS4S
-
-
-@Turner2022
-
-To complement inductive and inferential methods, we present a system for developing deductive models of social behavior that predict outcomes given a set of simplifying assumptions about social and cognitive processes, i.e., given a *model* of social behavior.

@@ -1,85 +1,187 @@
+---
+editor: 
+  markdown: 
+    wrap: 80
+---
+
 # Intro: computational social science models as decision support tools
 
-Resources are limited for developing educational or training programs aimed at 
+Resources are limited for developing educational or training programs aimed at
 improving *sustainable outcomes*, or any outcome. Here a *sustainable behavior*
 is a behavior that promotes climate change adaptation, equitable development,
 personal and public health, ecosystem protection, or otherwise advances one of
-the [seventeen United Nations Sustainable Development Goals](https://sdgs.un.org/goals). 
-Striving to meet these sustainable development goals helps to
-meet the needs of people living today without sacrificing the future
-avaiability of environmental, ecological, economic, and social capital needed to
-support people of tomorrow.
+the [seventeen United Nations Sustainable Development
+Goals](https://sdgs.un.org/goals). Striving to meet these sustainable
+development goals helps to meet the needs of people living today without
+sacrificing the future avaiability of environmental, ecological, economic, and
+social capital needed to support people of tomorrow.
 
-For instance, in a public
-health intervention study, @Airoldi2024 compared which of two methods was better
-for selecting the *seed group* of people who would be first to be taught about
-how to maintain good health, such as handwashing to prevent sickness 
-or knowing warning signs of pregnancy complications. They found that seed groups
-composed of randomly selected friends of a randomly selected people were
-correlated with broader diffusion of these behaviors among rural Honduran
-villagers, compared to plain random selection. This is an important finding
-that could truy help ut could other methods have
-worked better? How much do environmental and social context matter?
-Perhaps one method might work well in one case is worse in another.
+For instance, in a public health intervention study, @Airoldi2024 compared which
+of two methods was better for selecting the *seed group* of people who would be
+first to be taught about how to maintain good health, such as handwashing to
+prevent sickness or knowing warning signs of pregnancy complications. They found
+that seed groups composed of randomly selected friends of a randomly selected
+people were correlated with broader diffusion of these behaviors among rural
+Honduran villagers, compared to plain random selection. This is an important
+finding that could truy help ut could other methods have worked better? How much
+do environmental and social context matter? Perhaps one method might work well
+in one case is worse in another.
 
-It would be difficult to follow this approach to infer which
-of several methods is superior for new situations due to cost and logistics.
-Computational modeling of social behavior offers an alternative. In the 
-approach described here, we design
-strategically simplified versions of the social systems of interest, then 
-implement them as math or computer code. 
-With one more step, either manipulate equations or *iterat* the model (i.e.,
-*run* the model), we can observe a simulation of how behaviors *diffuse*
-from person to person through instruction or observation. These models lend
-themselves to application to different contexts since they can
-support different assumptions about social network structure, learning strategies, 
-environmental conditions, and other relevant factors. 
+It would be difficult to follow this approach to infer which of several methods
+is superior for new situations due to cost and logistics. Computational modeling
+of social behavior offers an alternative. In the approach described here, we
+design strategically simplified versions of the social systems of interest, then
+implement them as math or computer code. With one more step, either manipulate
+equations or *iterat* the model (i.e., *run* the model), we can observe a
+simulation of how behaviors *diffuse* from person to person through instruction
+or observation. These models lend themselves to application to different
+contexts since they can support different assumptions about social network
+structure, learning strategies, environmental conditions, and other relevant
+factors.
 
 ## Outline
 
 After this Intro chapter, the notes are/will be organized as follows:
 
-- Motivation and philosophy of CSS4S
-  - [Chapter 2: Motivations](motivation.qmd)
-  - [Chapter 3: Philosophy of Computational Social Science (for
-    Sustainability)](philosophy-of-css4s.qmd)
-- Developing Computational Models of Social Science
-  - [Chapter 4: Models and Agent-based Modeling](models.qmd)
-  - [Chapter 5: Social Networks](social-networks.qmd)
-  - [Chapter 6: Diffusion of Adaptations Through Social
-    Learning](learning-diffusion.qmd)
-  - [Chapter 7: Cooperation and Coordination](coop-coord.qmd)
-  - [Chapter 8: Opinion Dynamics](opinion-dynamics.qmd)
-- Presenting your work
-  - [Chapter 9: Plots, Tables, Drawings, and Other Figures](figures.qmd)
-  - [Chapter 10: Writing](writing.qmd)
-- Conclusion and what's next
-  - [Chapter 11: Review](review.qmd)
-  - [Chapter 12: Open Technical and Scientific Questions and
-    Problems](open-problems.qmd)
-  - [Chapter 13: Conclusion](conclusion.qmd)
+-   Motivation and philosophy of CSS4S
+    -   [Chapter 2: Motivations](motivation.qmd)
+    -   [Chapter 3: Philosophy of Computational Social Science (for
+        Sustainability)](philosophy-of-css4s.qmd)
+-   Developing Computational Models of Social Science
+    -   [Chapter 4: Models and Agent-based Modeling](models.qmd)
+    -   [Chapter 5: Social Networks](social-networks.qmd)
+    -   [Chapter 6: Diffusion of Adaptations Through Social
+        Learning](learning-diffusion.qmd)
+    -   [Chapter 7: Cooperation and Coordination](coop-coord.qmd)
+    -   [Chapter 8: Opinion Dynamics](opinion-dynamics.qmd)
+-   Presenting your work
+    -   [Chapter 9: Plots, Tables, Drawings, and Other Figures](figures.qmd)
+    -   [Chapter 10: Writing](writing.qmd)
+-   Conclusion and what's next
+    -   [Chapter 11: Review](review.qmd)
+    -   [Chapter 12: Open Technical and Scientific Questions and
+        Problems](open-problems.qmd)
+    -   [Chapter 13: Conclusion](conclusion.qmd)
 
 There are a number of *motivating problems and empirical motivations* for
 developing computational social science models for sustainability (see the [next
-chapter](motivation.qmd). While this
-course exists to assist in practical decision making to support sustainability,
-the models we design and knowledge we gain in the process contribute to broader
-efforts of augmenting our scientific understanding of social behavior
-[@SmaldinoBook2023]. This work "stands on the shoulders of giants" of
-social scientists, and even philosophers of science, who have struggled with
-these problems, and the general problem of studying our own human behavior and
-the social water that we swim in daily. Just like fish don't "know" that they
-live in water, we humans are met with difficulties when we try to study
-scientifically social behavior, for which we have deeply hard-wired and
+chapter](motivation.qmd). While this course exists to assist in practical
+decision making to support sustainability, the models we design and knowledge we
+gain in the process contribute to broader efforts of augmenting our scientific
+understanding of social behavior [@SmaldinoBook2023]. This work "stands on the
+shoulders of giants" of social scientists, and even philosophers of science, who
+have struggled with these problems, and the general problem of studying our own
+human behavior and the social water that we swim in daily. Just like fish don't
+"know" that they live in water, we humans are met with difficulties when we try
+to study scientifically social behavior, for which we have deeply hard-wired and
 culturally-learned folk understandings. It will take a special effort to break
 loose of these folk understandings to create mechanistic models to use in our
 analyses (discussed more in [Chapter 3](philosophy-of-css4s.qmd)).
 
-## Cognitive and social foundations of computational social science
+## Philosophy of CSS4S
 
-The following chapters stand on a foundation of cognitive, social, and behavioral
-sciences. Models of social behavior simplify the real-world to understand the
-consequences of complex social dynamics. Social interaction is charactarized by complexity, 
+Computational modeling provides a means of deducing whether certain interactions
+between components of social behavioral systems gives rise to emergent
+phenomena, such as polarization . @OConnor2019Origins explains this approach
+masterfully as applied to problems of gender equity, and problems of equality in
+general, writing (p. 10),
 
+> Gender norms and norms of inequity emerge in the context of a dynamical, human
+> interaction. Empirical results gathered at a single time will fail to capture
+> these interactions. \[Social emergence\] involves countless interactions
+> across many, many social actors. In short, it is not practical to gain a full
+> understanding of the dynamics of the emergence of conventions and norms in
+> human society via empirical means. Models can fill the gap. \[In\] cases where
+> social interventions are called for...Social interventions are costly in terms
+> of time and effort. They also pose a risk when they impact the lives of those
+> involved...They can then be used to direct further empirical study that is
+> well grounded in theoretical prediction.
 
+This highlights a goal of ours in developing the CSS4S courses: to develop a set
+of sustainability-focused tools to understand and predict how different social
+intervention strategies could spread. These theoretical and computational tools
+are held together within a framework of layers of adaptations. At the
+superficial layer, we assume that sustainable practices are adaptations in that
+they provide a greater fitness than alternatives. In human societies, every
+neurotypical individual possesses adaptive cognitive capacities for learning
+socially or individual experimentation, honed over hundreds of millions of years
+of evolution. An additional cognitive adaptation of humans is the ability to
+form beliefs and hold opinions about people, places, or the relative benefit of
+alternative behaviors through persuasion instead of direct observation. This
+socmod framework sits at a level of abstraction above any particular social
+emergence modeling approach, be it cultural evolution, opinion dynamics,
+cultural attractor theory, etc. Likewise, socmod's level of abstraction allows
+for flexible representation of social structure, with social networks given
+special prominence since they are to social emergence what the Cartesian and
+other coordinate systems are to physics. In the socmod software, we provide
+several social network models for convenience and pedagogy, including
+small-world, scale-free, homophily, and core-periphery networks.
 
+All these design choices listed above were made in order to create tools for
+modeling social behavior that fit ergonomically with empirical study. That is,
+these models can both be set up with sufficient detail to represent key details
+of real-world systems, while also being useful for designing new empirical
+studies. @Deffner2024 provide a worked toy case study of how agent-based
+modeling can be used rigorously in this way. The full example is complex with
+agent-based modeling and data fitting in a single example. In sustainability
+problems like gender equity in the modern world, a single study would likely be
+mainly modeling or mainly empirical. The point, however, is that models must be
+sufficiently representative of potential empirical studies to be truly useful.
+In this way we can build a more rigorous, complete body of knowledge of
+sustainability interventions so we need not ask and answer new questions and
+fracture knowledge every time, but instead previous results can build and
+multiply knowledge. In other words, this approach can help us move "beyond
+playing 20 questions with nature" as @Almaatouq2022 encourage.
+
+### A common language for sustainability science
+
+If an electrical engineer wants to design a new solar panel, they use the
+language of physics and some standard notation shared by other engineers and
+scientists within and outside the field of electrical engineering. Furthermore,
+there exist software packages for engineering applications such as photonics
+widespread use In social science there is no such common language. Instead, the
+common practice is to use one existing framework, each of which has certain
+historical baggage. It is rare to see analyses of how different social
+behavioral frameworks relate to one another beyond comparing how relatively well
+their predictions match reality. @OConnor2019Origins notes in Chapter 1 that the
+debates about how to model social behavior and emergence "get quite hot". She
+explains further in footnote 4 that "Cultural attraction theorists accuse those
+using population biology-type models of trying to fit the square peg of cultural
+evolution into the round hole of biological evolution. In response, cultural
+attraction theory is accused of circular reasoning. Evolutionary game theorists
+are criticized for over-simplification, while accusing others of building models
+that lack causal transparency." This may leave students bewildered on which
+theoretical tradition to choose, compounded by the fact that practitioners from
+different traditions entrench and battle from isolated bunkers, especially for
+students in sustainability or other more applied fields looking to harness
+computational social science modeling to make progress on problems that needed
+solutions *yesterday*. It is important to analyze strengths and weaknesses of
+different theories. In the context of sustainability, however, it feels that
+there is little time for arguing about which theory is "best". We instead
+propose a new framework for analyzing of social behavior without the historical
+baggage. We sample and synthesize the best of what's around, tailored for
+promoting sustainability through social intervention and predicting the social
+diffusion of adaptive sustainable practices.
+
+In this course, we choose a more universal language and descriptive notation for
+social behavior that we hope is more accessible for researchers across fields
+relevant to sustainability. In this way we follow Feyerabend, who posits that a
+scientist "interested in maximal empirical content...will adopt a pluralistic
+methodology; \[they\] will compare theories with other theories"
+[@Feyerabend2010, p. 27]. Instead of comparing how well different theories match
+empirical data, here we seek to "improve rather than discard the views that
+appear to lose in the competition" (*ibid*). For example, to avoid any confusion
+that we may be "trying to fit the square peg" of culture into the "round hole of
+biological evolution", we frame the flow of information through social networks
+in terms of social learning. For example, cultural evolution tends to work with
+"cultural traits" that is a metaphor for behavior, behavioral strategies, or
+knowledge. While it is possible to re-define any word to mean anything, the word
+"trait" was inherited from population biology and genetic evolution, and it
+presents an extra cognitive mapping for newcomers that may be misleading.
+Instead of using the metaphors of "selection" and "reproduction" for social
+processes, we opt instead for a more concrete framing involving social partner
+pairing, interaction, and teaching.
+
+## A general model for sustainability
+
+**PUT STUFF HERE FROM PREVIOUS**
